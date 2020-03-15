@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+/*
+一定不要直接写json字符串
+<1>先去写数据结构  出错会报错
+<2>JSON.stringify 转成对应json格式字符串
+*/
+             var arr=[
+                    {   title: "电视",
+                        childs: [
+                            {
+                                title:"APHAEA阿贝亚 A3",
+                                price: 7999.00,
+                                intro:"洞见未来/帧享视界",
+                                img: "https://www.konka.com/public/images/16/07/a0/da8514538de5a9fa1d25e3462b27c529d69a3d90.jpg?63201_OW800_OH800"
+                            },
+                            {
+                                title:"50时全面屏AI",
+                                price: 1499.00,
+                                intro:"4K HDR/人工智能",
+                                img: "https://www.konka.com/public/images/c2/e6/5e/1511350b6bb5671651c8c20245327fe7d2ef7e8e.jpg?52213_OW800_OH800"
+                            },
+                            {
+                                title: "55时全面屏AI",
+                                price: 2099.00,
+                                intro:"远程语言/4K HDR",
+                                img: "https://www.konka.com/public/images/a9/d1/43/5e738d5fe734466d0b3636667d1776f68e8efafc.jpg?69493_OW800_OH800"
+                            },
+                            {
+                                title: "65时全面屏AI",
+                                price: 4099,
+                                intro:"远程语音/超大内存",
+                                img: "https://www.konka.com/public/images/71/d9/5c/76368b809e28908e80a0034e646ff5f70ff89a4c.jpg?52954_OW800_OH800"
+                            },
+                            {
+                                title: "75时巨屏声控",
+                                price: 4000,
+                                intro:"超薄金属机身",
+                                img: "https://www.konka.com/public/images/8d/6c/ef/1378b80f33b29b8e2ba372ed4a7fc980574aeda3.jpg?07799_OW800_OH800"
+                            },
+                            {
+                                title: "75时巨屏声控",
+                                price: 3399,
+                                img: "https://www.konka.com/public/images/f6/f5/ba/55199d344f48b6acf757a9db509b1c6442245e8a.jpg?92570_OW800_OH800"
+                            }
+                        ]
+                    },
+                    {
+                        title: "冰箱",
+                        childs: [
+                            {
+                                title:"450升十字对开门",
+                                price: 2649.00,
+                                intro:"一级能效/风冷无霜",
+                                img: "https://www.konka.com/public/images/9a/0d/75/b85646fae2c3a687d77a5d9d33186af4a23df044.jpg?14680_OW800_OH800"
+                            },
+                            {
+                                title:"400升十字对开门",
+                                price: 1799.00,
+                                intro:"电脑温控/超薄机身",
+                                img: "https://www.konka.com/public/images/fd/09/e5/ec49cd90db55323911e3e093490b654e18767a54.jpg?19087_OW800_OH800W800_OH800"
+                            },
+                            {
+                                title: "300升十字对开门",
+                                price: 1699.00,
+                                intro:"远程语言/4K HDR",
+                                img: "https://www.konka.com/public/images/99/da/ec/8e5f4259fa65c2ba54b8f6ce3e5738ebcf1d1c96.jpg?36436_OW800_OH800"
+                            },
+                            {
+                                title:"400升十字对开门",
+                                price: 1799.00,
+                                intro:"电脑温控/超薄机身",
+                                img: "https://www.konka.com/public/images/fd/09/e5/ec49cd90db55323911e3e093490b654e18767a54.jpg?19087_OW800_OH800W800_OH800"
+                            },
+                            {
+                                title:"450升十字对开门",
+                                price: 2649.00,
+                                intro:"一级能效/风冷无霜",
+                                img: "https://www.konka.com/public/images/9a/0d/75/b85646fae2c3a687d77a5d9d33186af4a23df044.jpg?14680_OW800_OH800"
+                            },
+                            {
+                                title: "300升十字对开门",
+                                price: 1699.00,
+                                intro:"远程语言/4K HDR",
+                                img: "https://www.konka.com/public/images/99/da/ec/8e5f4259fa65c2ba54b8f6ce3e5738ebcf1d1c96.jpg?36436_OW800_OH800"
+                            }
+                       ]
+                   },
+                   {
+                    title: "洗衣机",
+                        childs: [
+                            {
+                                title:"3公斤全自动波轮",
+                                price: 899.00,
+                                intro:"高温煮洗/纳米抑菌",
+                                img: "https://www.konka.com/public/images/66/f6/4f/584c4fad0ec5f0b01573abb5c5edfda137f473f6.jpg?94471_OW800_OH800"
+                            },
+                            {
+                                title:"3公斤全自动波轮",
+                                price: 899.00,
+                                intro:"高温煮洗/纳米抑菌",
+                                img: "https://www.konka.com/public/images/66/f6/4f/584c4fad0ec5f0b01573abb5c5edfda137f473f6.jpg?94471_OW800_OH800"
+                            },
+                            {
+                                title:"8公斤全自动波轮",
+                                price: 2099.00,
+                                intro:"高温煮洗/纳米抑菌",
+                                img: "https://www.konka.com/public/images/23/39/97/fa478038f19f6960fb14740771f4f76fedc0591a.jpg?15271_OW800_OH800"
+                            },
+                            {
+                                title:"3公斤全自动波轮",
+                                price: 1899.00,
+                                intro:"高温煮洗/纳米抑菌",
+                                img: "https://www.konka.com/public/images/66/f6/4f/584c4fad0ec5f0b01573abb5c5edfda137f473f6.jpg?94471_OW800_OH800"
+                            },
+                            {
+                                title:"8公斤全自动波轮",
+                                price: 2099.00,
+                                intro:"高温煮洗/纳米抑菌",
+                                img: "https://www.konka.com/public/images/23/39/97/fa478038f19f6960fb14740771f4f76fedc0591a.jpg?15271_OW800_OH800"
+                            },
+                            {
+                                title:"3公斤全自动波轮",
+                                price: 1899.00,
+                                intro:"高温煮洗/纳米抑菌",
+                                img: "https://www.konka.com/public/images/66/f6/4f/584c4fad0ec5f0b01573abb5c5edfda137f473f6.jpg?94471_OW800_OH800"
+                            }
+                       ]
+                   }    
+                  
+             ];
+             //把上述的数据结构写完以后
+
+            var str = JSON.stringify(arr);
+            document.write(str);
+
+     </script>
+</body>
+</html>
